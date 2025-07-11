@@ -67,6 +67,8 @@ class ReplaceFileReferencesController
 
         $this->framework->initialize();
 
+        System::loadLanguageFile('default');
+
         $file = FilesModel::findByUuid($fileUuid);
 
         if (null === $file) {
