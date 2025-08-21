@@ -13,7 +13,7 @@ declare(strict_types=1);
 use InspiredMinds\ContaoFileUsage\DataContainer\FolderDataContainer;
 
 $GLOBALS['TL_DCA']['tl_files']['config']['dataContainer'] = FolderDataContainer::class;
-$GLOBALS['TL_DCA']['tl_files']['list']['operations']['fileusage'] = [];
+$GLOBALS['TL_DCA']['tl_files']['list']['operations']['fileusage']['primary'] = true;
 
 $GLOBALS['TL_DCA']['tl_files']['list']['global_operations'] = array_merge(
     [
