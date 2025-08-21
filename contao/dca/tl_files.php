@@ -20,6 +20,7 @@ $GLOBALS['TL_DCA']['tl_files']['list']['global_operations'] = array_merge(
         'unused' => [
             'href' => 'unused=1',
             'icon' => 'bundles/contaofileusage/search.svg',
+            'prefetch' => false,
         ],
     ],
     $GLOBALS['TL_DCA']['tl_files']['list']['global_operations'],
