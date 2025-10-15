@@ -98,3 +98,5 @@ class CustomFileUsageResult implements ResultInterface
     }
 }
 ```
+
+See [here](https://packagist.org/packages/inspiredminds/contao-file-usage/dependents?order_by=name) for possible further examples.
