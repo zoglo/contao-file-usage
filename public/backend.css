@@ -1,4 +1,4 @@
-.selector_container > ul:not(.sgallery) {
+.selector_container:has(.gimage) > ul:not(.sgallery) {
     display: flex;
 }
 
