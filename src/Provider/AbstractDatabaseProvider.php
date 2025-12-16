@@ -34,11 +34,7 @@ abstract class AbstractDatabaseProvider implements FileUsageProviderInterface
 
     protected function getSchemaManager(): AbstractSchemaManager
     {
-        if (!$this->schemaManager) {
-            $this->schemaManager = method_exists($this->db, 'createSchemaManager') ? $this->db->createSchemaManager() : $this->db->getSchemaManager();
-        }
-
-        return $this->schemaManager;
+        return $this->schemaManager ??= $this->db->createSchemaManager();
     }
 
     protected function getTablesWithResults(): array

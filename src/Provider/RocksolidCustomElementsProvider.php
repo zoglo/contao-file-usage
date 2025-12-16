@@ -16,7 +16,6 @@ use Contao\FilesModel;
 use Contao\StringUtil;
 use Contao\Validator;
 use Doctrine\DBAL\Connection;
-use Doctrine\DBAL\Schema\AbstractSchemaManager;
 use InspiredMinds\ContaoFileUsage\Result\FileTreeMultipleResult;
 use InspiredMinds\ContaoFileUsage\Result\ResultsCollection;
 use MadeYourDay\RockSolidCustomElements\CustomElements;
@@ -36,8 +35,7 @@ class RocksolidCustomElementsProvider implements FileUsageProviderInterface
             return $collection;
         }
 
-        /** @var AbstractSchemaManager $schemaManager */
-        $schemaManager = method_exists($this->db, 'createSchemaManager') ? $this->db->createSchemaManager() : $this->db->getSchemaManager();
+        $schemaManager = $this->db->createSchemaManager();
         $tableNames = $schemaManager->listTableNames();
 
         foreach (['tl_content', 'tl_module'] as $fragmentTable) {

@@ -15,13 +15,11 @@ use InspiredMinds\ContaoFileUsage\DataContainer\FolderDataContainer;
 $GLOBALS['TL_DCA']['tl_files']['config']['dataContainer'] = FolderDataContainer::class;
 $GLOBALS['TL_DCA']['tl_files']['list']['operations']['fileusage']['primary'] = true;
 
-$GLOBALS['TL_DCA']['tl_files']['list']['global_operations'] = array_merge(
-    [
-        'unused' => [
-            'href' => 'unused=1',
-            'icon' => 'bundles/contaofileusage/search.svg',
-            'prefetch' => false,
-        ],
+$GLOBALS['TL_DCA']['tl_files']['list']['global_operations'] = [
+    'unused' => [
+        'href' => 'unused=1',
+        'icon' => 'bundles/contaofileusage/search.svg',
+        'prefetch' => false,
     ],
-    $GLOBALS['TL_DCA']['tl_files']['list']['global_operations'],
-);
+    ...$GLOBALS['TL_DCA']['tl_files']['list']['global_operations'],
+];

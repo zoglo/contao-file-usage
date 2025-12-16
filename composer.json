@@ -23,9 +23,9 @@
         }
     ],
     "require": {
-        "php": ">=8.1",
+        "php": ">=8.2",
         "contao/core-bundle": "^4.13 || ^5.0",
-        "doctrine/dbal": "^3.0",
+        "doctrine/dbal": "^3.0 || ^4.0",
         "khill/php-duration": "^1.0",
         "symfony/cache": "^5.4 || ^6.4 || ^7.1",
         "symfony/config": "^5.4 || ^6.4 || ^7.1",
@@ -42,7 +42,8 @@
     },
     "require-dev": {
         "contao/easy-coding-standard": "^6.0",
-        "contao/rector": "^1.0"
+        "contao/rector": "^1.0",
+        "shipmonk/composer-dependency-analyser": "^1.4"
     },
     "config": {
         "allow-plugins": {
